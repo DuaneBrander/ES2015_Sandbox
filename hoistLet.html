@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hoising Demo</title>
+</head>
+<body>
+  <div>
+    <a>ONE</a>
+    <hr>
+    <a>TWO</a>
+    <hr>
+    <a>THREE</a>
+  </div>
+
+<script type="text/javascript">
+  'use strict';
+  var elems = document.getElementsByTagName('a');
+
+  for ( let i = 0; i < elems.length; i++ ) {
+    elems[ i ].addEventListener( 'click', function (e) {
+      e.preventDefault();
+      alert( 'I am link #' + (i + 1) );
+    }, 'false' );
+  }
+</script>
+
+</body>
+</html>
