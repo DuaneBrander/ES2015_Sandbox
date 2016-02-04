@@ -9,6 +9,7 @@ class Cat {
     console.log(`${this.name} the ${this.type} makes a noise.`);
   }
 }
+
 class Lion extends Cat {
   speak() {
     super.speak();
