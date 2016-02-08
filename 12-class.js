@@ -11,6 +11,9 @@ class Cat {
 }
 
 class Lion extends Cat {
+  constructor(name) {
+    super(name);
+  }
   speak() {
     super.speak();
   }

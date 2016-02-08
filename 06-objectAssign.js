@@ -4,11 +4,11 @@ let myObj = {
   a: '1',
   b: '2',
   c: '3',
-  d: {
+  obj: {
     z: '26',
     y: '25'
   },
-  ar: [1,2,3],
+  arr: [1,2,3],
   date: new Date(),
   output: function() {
     for (let key in this) {
@@ -19,26 +19,26 @@ let myObj = {
   }
 }
 
-// myObj.output();
+myObj.output();
 
-// console.log('\n----- CLONED OBJ -----\n');
+console.log('\n----- CLONED OBJ -----\n');
 
 
 let myClonedObj = Object.assign({}, myObj);
-// myClonedObj.output();
+myClonedObj.output();
 
-// console.log('========== MODIFYING ARRAYS AND OBJECTS ===========');
+// console.log('========== 2 - MODIFYING ARRAYS AND OBJECTS ===========');
 
 // myObj.c = '9';
-// myClonedObj.ar[1] = 99;
-// myClonedObj.d.y = 0;
+// myClonedObj.arr[1] = 99;
+// myClonedObj.obj.y = 0;
 
 // console.log('+++++++ MY OBJ +++++++++++++++')
 // myObj.output();
 // console.log('\n\n******* CLONE ****************')
 // myClonedObj.output();
 
-// console.log('========== MODIFYING FUNCTION ===========');
+// console.log('========== 3 - MODIFYING FUNCTION ===========');
 
 // myClonedObj.output = function () {
 //   for (let key in this) {
@@ -73,7 +73,22 @@ let myClonedObj = Object.assign({}, myObj);
 
 // console.log('newObj = ', newObj);
 
-// console.log('========== Mutation ===========');
+// console.log('========== 4 - Mutation ===========');
 // Object.assign(a, b, c);
 
 // console.log('New mutation = ', a);
+
+
+// console.log('======== USE CASE ===========');
+
+// function myFunction (options) {
+//   let defaults = {
+//     isNew: false,
+//     answer: 42,
+//     widgets: []
+//   }
+//   let myOptions = Object.assign({}, defaults, options);
+//   console.log('options = ', myOptions);
+// }
+
+// myFunction({isNew: true, widgets:['a', 'b']});
