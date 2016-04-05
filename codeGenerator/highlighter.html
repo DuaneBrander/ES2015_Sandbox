@@ -1,0 +1,147 @@
+<html>
+  <link href="prism.css" rel="stylesheet" />
+  <script src="prism.js"></script>
+  <body>
+    <h1> Binary and Octal Literals </h1>
+<pre>
+<code class="language-js">
+// ES 5 Code
+var myBinary = 01001;
+console.log(myBinary); // 513
+</code>
+</pre>
+
+<pre>
+<code class="language-js">
+// ES 2015 Code
+var myBinary = 0b01001;
+console.log(myBinary); // 9
+</code>
+</pre>
+
+<pre>
+<code class="language-js">
+// ES 5 Code
+var myOctal = 0170;
+console.log(myOctal); // 120
+</code>
+</pre>
+
+<pre>
+<code class="language-js">
+// ES 2015 Code
+var myOctal = 0o170;
+console.log(myOctal); // 120
+</code>
+</pre>
+
+<pre>
+<code class="language-js">
+var str = 'To be, or not to be, that is the question.';
+console.log(str.startsWith('To be'));         // true
+console.log(str.startsWith('not to be'));     // false
+</code>
+</pre>
+
+<pre>
+<code class="language-js">
+console.log(str.endsWith('question.')); // true
+console.log(str.endsWith('to be'));     // false
+</code>
+</pre>
+
+<pre>
+<code class="language-js">
+'Blue Whale'.includes('blue'); // returns false (Case Sensitive)
+console.log(str.includes('To be'));       // true
+console.log(str.includes('question'));    // true
+console.log(str.includes('nonexistent')); // false
+</code>
+</pre>
+
+<pre>
+<code class="language-js">
+'abc'.repeat(0);    // ''
+'abc'.repeat(1);    // 'abc'
+'abc'.repeat(2);    // 'abcabc'
+</code>
+</pre>
+
+<pre>
+<code class="language-js">
+String.fromCodePoint(42);       // "*"
+String.fromCodePoint(65, 90);   // "AZ"
+</code>
+</pre>
+
+<pre>
+<code class="language-js">
+'ABC'.codePointAt(1);          // 66
+'\uD800\uDC00'.codePointAt(0); // 65536
+
+'XYZ'.codePointAt(42); // undefined
+</code>
+</pre>
+
+<pre>
+<code class="language-js">
+let myArr = [1,2,3];
+for (let value of myArr) {
+  console.log(`value = ${value}`); // Outputs 1 then 2 then 3
+}
+</code>
+</pre>
+
+<pre>
+<code class="language-js">
+let myStr = 'the lazy brown dog';
+for (let char of myStr) {
+  console.log(`char = ${char}`); // Outputs each char
+}
+</code>
+</pre>
+
+<pre>
+<code class="language-js">
+let myObj = {
+  first: '1st',
+  second: '2nd',
+  last: '3rd'
+}
+
+myObj[Symbol.iterator] = function * () {
+  yield 'second';
+  yield 'last';
+  yield 'first';
+};
+
+for (let key of myObj) {
+  console.log(`key = ${key} -- ${myObj[key]}`); // outputs second then last then first
+}
+</code>
+</pre>
+
+<pre>
+<code class="language-js">
+let iterable = [3, 5, 7];
+iterable.foo = "hello";
+
+for (let i in iterable) {
+  console.log(i); // logs 0, 1, 2, "foo"
+}
+
+for (let i of iterable) {
+  console.log(i); // logs 3, 5, 7
+}
+</code>
+</pre>
+
+<pre>
+<code class="language-js">
+
+</code>
+</pre>
+
+
+  </body>
+</html>
